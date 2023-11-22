@@ -1,0 +1,34 @@
+body {
+    background-color: #8e6aa1; 
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+#container {
+    border: 2px solid black;
+    width: 80%;
+    height: 70vh;
+    margin: 60px auto 60px auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#sketch-container {
+    border: 2px solid flex;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.sketch {
+    border: 2px solid black;
+    margin: 0;
+    background-color: #fff;
+    width: 26px;
+    height: 20px;
+}
