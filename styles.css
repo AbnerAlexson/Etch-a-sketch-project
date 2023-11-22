@@ -7,9 +7,9 @@ body {
 }
 
 #header {
-    margin: 60px auto 60px auto;
+    margin: 60px auto 0 auto;
     width: 500px;
-    height: 100px;
+    height: 80px;
     font-weight: 800;
     font-size: 50px;
     display: flex;
