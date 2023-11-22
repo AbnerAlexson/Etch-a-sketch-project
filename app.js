@@ -1,12 +1,15 @@
 let sketching = document.querySelectorAll(".sketch");
-let reset = document.createElement('div')
-reset.classList.add('reset');
+let sketchContainer = document.querySelector('#sketch-container');
+let reset = document.querySelector('#reset')
+
 sketching.forEach(sketch => {
     sketch.addEventListener('mouseover', (e) => {
         let target = e.target;
-        target.classList.add('sketched')
-    })
-})
+        target.classList.add('sketched');
+    });
+});
 
-
-
+//event listeners that reset the application
+reset.addEventListener('click', () => {
+    location.reload();
+});
