@@ -129,6 +129,7 @@ h1 {
     height: 80%;
     width: 90%;
     background-color: #fff;
+    display: grid;
 }
 
 
