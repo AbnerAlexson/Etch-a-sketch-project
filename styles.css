@@ -1,0 +1,135 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: rgb(13, 20, 63);
+}
+
+h1 {
+    margin: 0 auto;
+    padding-top: 40px;
+    text-align: center;
+    color: #fff;
+}
+
+#flex-container {
+    border: 2px solid #fff;
+    padding: 20px;
+    margin: 60px auto 0 auto;
+    width: 60vw;
+    height: 70vh;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#settings {
+    border: 2px solid aliceblue;
+    padding: 10px;
+    height: 95%;
+    width: 25%;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+}
+
+#buttons {
+    /*border: 2px solid black;*/
+    width: 90%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10%;
+}
+
+.black, .eraser, .random, .reset {
+    padding: 0;
+    border-radius: 5px;
+    font-weight: 800;
+    background-color: transparent;
+    color: #fff;
+    height: 13%;
+    width: 60%;
+}
+
+.black {
+    background-color: #262626;
+}
+
+.eraser {
+    background-color: #fff;
+    color: #262626;
+}
+
+@keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.random {
+    background: linear-gradient(45deg, #ff0000, #ff9900, #33cc33, #3399ff, #9900cc, #ff0000);
+    color: #fff;
+    animation: rainbow 8s linear infinite;
+}
+
+#input {
+   /* border: 2px solid black;*/
+    width: 90%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10%;
+}
+
+#input > input {
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 5px;
+    width: 60%;
+    height: 7%;
+}
+
+#input > button {
+    padding: 0;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+    height: 4em;
+    width: 60%;
+    overflow: hidden;
+}
+
+#content {
+    border: 2px solid #fff;
+    margin: 0;
+    padding: 10px;
+    height: 95%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.board {
+    border: 2px solid #262626;
+    height: 80%;
+    width: 90%;
+    background-color: #fff;
+}
+
+
+
