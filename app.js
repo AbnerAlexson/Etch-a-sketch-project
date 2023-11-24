@@ -3,8 +3,10 @@ let buttonChangeTiles = document.querySelector('#input > button');
 let black = document.querySelector('.black');
 let eraser = document.querySelector('.eraser');
 let random = document.querySelector('.random');
-let reset = document.querySelector('.reset');
+let resetbtn = document.querySelector('.reset');
 let sketchMode = document.querySelector('#mode');
+
+alert("set tiles before drawing");
 
  function setTiles(tiles) {
     let board = document.querySelector('.board');
@@ -12,7 +14,7 @@ let sketchMode = document.querySelector('#mode');
     tilesDelete.forEach((div) => div.remove())
     board.style.gridTemplateColumns = `repeat(${tiles}, 1fr)`;
     board.style.gridTemplateRows = `repeat(${tiles}, 1fr)`;
-
+    
     let numTiles = tiles * tiles;
     for (let i = 0; i < numTiles; i++) {
         let sketchTiles = document.createElement("div");
@@ -23,8 +25,11 @@ let sketchMode = document.querySelector('#mode');
                 e.target.style.backgroundColor = color;
             };
         });
+        // Event listener on the reset button, button reset the drawing.
+        resetbtn.addEventListener('click', () => {
+            sketchTiles.style.backgroundColor = '#fff';
+        });
     };
-
 };
 
 // function to change the size of tile drawing board
@@ -49,10 +54,7 @@ eraser.addEventListener('click', () => {
     color = '#fff';
 });
 random.addEventListener('click', () => {
-    let red = Math.floor(Math.random() * 256) + 1;
-    let green = Math.floor(Math.random() * 256) + 1;
-    let blue = Math.floor(Math.random() * 256) + 1;
-    color = `rgb${red}, ${green}, ${blue}`;
+    color =  `rgb(${Math.floor(Math.random() * 256) + 1}, ${Math.floor(Math.random() * 256) + 1}, ${Math.floor(Math.random() * 256) + 1})`;
 });
 
 //Mode that toggles sketch mode
