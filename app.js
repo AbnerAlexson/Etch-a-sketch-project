@@ -12,8 +12,12 @@ let buttonChangeTiles = document.querySelector('#input > button');
     for (let i = 0; i < numTiles; i++) {
         let sketchTiles = document.createElement("div");
         sketchTiles.style.backgroundColor = 'yellow';
+        sketchTiles.addEventListener('mouseover', (e) => {
+            let target = e.target;
+            target.style.backgroundColor = 'black';
+        })
         board.insertAdjacentElement('beforeend', sketchTiles);
-    }
+    };
 };
 
 function modifyTiles(input) {
@@ -24,8 +28,10 @@ function modifyTiles(input) {
     };
 };
 
+
 buttonChangeTiles.addEventListener('click', () => {
     let inputTiles = document.querySelector('#input > input').value;
     modifyTiles(inputTiles);
 })
+
 
